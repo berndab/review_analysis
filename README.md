@@ -1,15 +1,11 @@
 # Amazon Vine Review Bias Analysis
 
-3093660
-
 ## Analysis of Vine Verses Non-Vine Reviews
 ### Sample: All Reviews
-To determine if Vine reviews are biased, the Amazon review data for electronics was analyzed using SQL
-queries. First, the review data was analyzed to determine the percentage of reviews that were 1, 2, 3, 4,
-5-star for all Vine and non-Vine reviews. Then the average review star rating was determined for all Vine
 
-and non-Vine reviews. Finally, the percentage of votes that were helpful votes for both Vine and non-
-Vine reviews were determined. The data generated is in the following table:
+To determine if Vine reviews are biased, the Amazon reviews for electronic products was analyzed using SQL
+queries. The review data was analyzed to determine the percentage of reviews for each review type that were 1, 2, 3, 4,
+5-star, the percentage of ratings that were 3 star or above, the average review star ratings, and the percentage of votes the catigorized the review as helpful. The data generated from this analysis is displayed in the following table:
 
 <table>
 	<thead>
@@ -40,32 +36,65 @@ Vine reviews were determined. The data generated is in the following table:
 		<tr>
 			<td>Vine</td>
 			<td>1.85%</td>
-			<td>5.03</td>
+			<td>5.03%</td>
 			<td>14.35%</td>
 			<td>35.32%</td>
 			<td>43.45%</td>
 			<td>93.12%</td>
-			<td>4.14%</td>
+			<td>4.14</td>
 			<td>80.76%</td>
 		</tr>
 	</tbody>
 </table>
 
-From the data we can see that Vine reviewers only give a 1-star review 1.85% of the time while non-Vine
-reviewers give a 1-star review 11.63% of the time. In addition, Vine reviewer give almost twice as many
-3 and 4-star reviews. Vine reviews give a 3-star review or above 93.12% of the time while non-Vine
-reviewers do this only 82.57% of the time. Overall average star score give by vine reviews is 0.11 %
-higher the average for non-Vine reviews. This data conclusively shows that in the aggregate, Vine
-reviewer are bias towards giving more positive reviews.
+From the data we can see that Vine reviewers only give a 1-star review 1.85% of the time while non-Vine reviewers give a 1-star review 11.63% of the time. In addition, Vine reviewer give almost twice as many 3 and 4-star reviews. Vine reviews give a 3-star review or above 93.12% of the time while non-Vine reviewers did this only 82.57% of the time.The average star score given by vine reviewerss is 0.11% higher the average start score given by Non-Vine reviewers. This statistical data shows that Vine review have higher star scores for multiple ratings measures over Non-Vine reivew which can only be explained if Vine reviewer are bias towards giving more positive reviews.
 
 ### Sample: Products with 15+ Vine and 15+ Non-Vine Reviews
 
-If the products in the sample are narrowed to only product that have 15 or more Vine and non-Vine
-reviews, the statistics for the Vine reviews all change less than a 1.5%. For the non-Vine statistics, the
-percent of 1-star ratings decrease by 4% with most of that decrease shifting to the 5-star rating
-percentage increase of 6%. The average star ratings on both types of reviews are almost equal with just
-a 0.07% difference. However, the percentage of review that are 3-star is still significantly higher at
-nearly 7% which confirms that Vine reviews are significantly biased towards higher star rating.
+ * **379 electronic products had 15 or more Vine and Non-Vine reviews**
+
+<table>
+	<thead>
+		<tr>
+			<th>Review Type</th>
+			<th>1 Star %</th>
+			<th>2 Star %</th>
+			<th>3 Star %</th>
+			<th>4 Star %</th>
+			<th>5 Star %</th>
+			<th>3 Star & Above %</th>
+			<th>Avg Star Rating</th>
+			<th>Helpful %</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Non-Vine</td>
+			<td>7.55%</td>
+			<td>5.34%</td>
+			<td>6.89%</td>
+			<td>16.72%</td>
+			<td>63.49%</td>
+			<td>87.11%</td>
+			<td>4.23</td>
+			<td>73.33%</td>
+		</tr>
+		<tr>
+			<td>Vine</td>
+			<td>1.55%</td>
+			<td>4.53%</td>
+			<td>14.27%</td>
+			<td>35.11%</td>
+			<td>44.54%</td>
+			<td>93.92%</td>
+			<td>4.16</td>
+			<td>82.19%</td>
+		</tr>
+	</tbody>
+</table>
+
+If the products in the sample are narrowed to only products that have 15 or more Vine and non-Vine reviews, the statistical values for the all Vine reviews all change less than a 1.5%. For the non-Vine statistics, the percent of 1-star ratings decrease by 4% with most of that decrease shifting to the 5-star rating percentage which increases by 6%. The average star ratings on both types of reviews are almost equal with just a 0.07% difference. However, the percentage of review that are 3-star and above is still significantly higher at
+for Vine review, nearly 7%, than Non-Vine review which confirms the hypothosis that Vine reviews are significantly biased towards higher star rating.
 
 ### Conclusion:
 Since the Vine reviews have significantly higher percentage of 3-star and above review then non-Vine
