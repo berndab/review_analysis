@@ -1,6 +1,7 @@
 # Amazon Vine Review Bias Analysis
 
 ## Analysis of Vine Verses Non-Vine Reviews
+
 ### Sample: All Reviews
 
 To determine if Vine reviews are biased, the Amazon reviews for electronic products was analyzed using SQL
@@ -93,11 +94,7 @@ From the data we can see that Vine reviewers only give a 1-star review 1.85% of 
 	</tbody>
 </table>
 
-If the products in the sample are narrowed to only products that have 15 or more Vine and non-Vine reviews, the statistical values for the all Vine reviews all change less than a 1.5%. For the non-Vine statistics, the percent of 1-star ratings decrease by 4% with most of that decrease shifting to the 5-star rating percentage which increases by 6%. The average star ratings on both types of reviews are almost equal with just a 0.07% difference. However, the percentage of review that are 3-star and above is still significantly higher at
-for Vine review, nearly 7%, than Non-Vine review which confirms the hypothosis that Vine reviews are significantly biased towards higher star rating.
+If sample is narrowed to only products that have 15 or more Vine and non-Vine reviews, all percent star ratings values for Vine reviews change less than a 1.5%. For Non-Vine review, the 1-star rating percentage decrease by 4% with most of that decrease being shifted to the 5-star review which increases by 6%. The average star ratings for both types of reviews are almost equal with only a 0.07% difference. However, the percentage of Vine reviews that are 3-star and above is still significantly greater by 7% over the percentage of Vine reviews that are 3-star and above. The data from this review sample confirms the hypothosis that Vine reviews are significantly biased towards higher star rating.
 
 ### Conclusion:
-Since the Vine reviews have significantly higher percentage of 3-star and above review then non-Vine
-review for both the total sample of reviews and the same of review for products that have 15 or more
-Vine and non-Vine reviews, this conclusively demonstrates that Vine reviews are positively biased as
-compared to non-Vine reviews.
+Since the Vine reviews have significantly higher percentage of 3-star and above rating than non-Vine review for both the total sample of reviews for both samples, the data conclusively demonstrates that Vine reviews are biased towards higher star scored as compared to Non-Vine reviews.
