@@ -1,5 +1,15 @@
 # Amazon Vine Review Bias Analysis
 
+## Overview
+
+This project analyzes electronic product reviews from Amazon to determine if star score of reviews created through Amazon Vine review program, where the reviewer is give a free sample of the product differ from ordinary product review that are create by amazon customers that purchased the product through Amazon. 
+
+## Technical Sumay
+
+This project storea that eletronic reviews source data file in AWS S3 storage then uses an ETL process migrate the review data in to a PostgreSQL database also in AWS. SQL queries are used to generate review statistics for both Vine and Non-Vine reviews which were used to create the comparison analysis of these reviews.
+
+
+
 ## Analysis of Vine Verses Non-Vine Reviews
 
 ### Sample: All Reviews
